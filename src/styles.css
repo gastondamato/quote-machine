@@ -1,18 +1,8 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
-}
-
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   vertical-align: baseline;
-}
-
-div {
-  position: relative;
-  z-index: 2;
 }
 
 body {
@@ -33,40 +23,47 @@ a {
 }
 
 #quote-box {
-  border-radius: 3px;
+  border-radius: 6px;
   position: relative;
-  width: 450px;
-  padding: 40px 50px;
+  width: 70%;
+  min-width: 180px;
+  padding: 5%;
   display: table;
   background-color: #fff;
+  margin: auto;
+}
+.footer {
+  display: table-row;
 }
 
 #text {
   text-align: center;
-  width: 450px;
+  width: 100%;
   height: auto;
-  clear: both;
-  font-weight: 500;
-  font-size: 1.75em;
+  font-weight: bold;
+  font-size: 1.2em;
+  display: table-row;
 }
 
 #author {
-  width: 450px;
+  width: 100%;
   height: auto;
-  clear: both;
   padding-top: 20px;
   font-size: 1em;
   text-align: right;
+  display: table-row;
+  opacity: 0.7;
 }
 
 button {
-  width: 200px;
+  width: 50%;
+  min-width: 110px;
   margin: auto;
-  display: block;
+  display: table-cell;
   float: right;
   height: 38px;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
   color: #fff;
   background-color: #333;
   outline: none;
@@ -84,15 +81,21 @@ button:hover,
 #tweet-quote {
   float: left;
   padding: 0px;
-  padding-top: 26px;
+  padding-top: 27px;
   text-align: center;
   font-size: 2.6em;
-  margin-right: 5px;
-  height: 30px;
-  width: 40px;
+  margin: auto;
+  height: 38px;
   color: #333;
+  display: table-cell;
 }
 
 #new-quote {
   float: right;
+}
+
+@media (min-width: 650) {
+  #quote-box {
+    max-width: 500px;
+  }
 }
