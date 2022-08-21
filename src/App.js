@@ -1,6 +1,6 @@
 import "./styles.css";
 import { useState, useEffect } from "react";
-import { FaTwitterSquare } from "react-icons/fa";
+import { FaTwitterSquare, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const Loading = () => {
   return <div>LOADING</div>;
@@ -10,7 +10,9 @@ const Quote = ({ quote, author }) => {
   return (
     <div>
       <div id="text">
-        <h2>{quote}</h2>
+        <h2>
+          <FaQuoteLeft /> {quote} <FaQuoteRight />
+        </h2>
       </div>
       <div id="author">-{author}</div>
     </div>
@@ -89,10 +91,12 @@ export default function App() {
     <div className="App">
       <div id="quote-box">
         <Quote quote={quote} author={author} />
-        <Twitter quote={quote} author={author} />
-        <button id="new-quote" onClick={getNewQuote}>
-          New Quote
-        </button>
+        <div className="footer">
+          <Twitter quote={quote} author={author} />
+          <button id="new-quote" onClick={getNewQuote}>
+            New Quote
+          </button>
+        </div>
       </div>
     </div>
   );
